@@ -52,13 +52,13 @@ bot.on(message('voice'), async ctx => {
         
         await ctx.reply(response.content)
        
-        say.export(response.content, 'Alex', 0.8, 'hal.wav');
+        // say.export(response.content, 'Alex', 0.8, 'hal.wav');
 
-        setTimeout(async () => {
-            const audio = fs.readFileSync('hal.wav');
-            await ctx.replyWithVoice({ source: audio}); 
-            removeFile('./hal.wav')
-        } ,1000)         
+        // setTimeout(async () => {
+        //     const audio = fs.readFileSync('hal.wav');
+        //     await ctx.replyWithVoice({ source: audio}); 
+        //     removeFile('./hal.wav')
+        // } ,1000)         
         console.log(INITIAL_SESSION.messages)
     }   catch (e) {
         console.log('Error while voice message', e.message)
@@ -82,13 +82,13 @@ bot.on(message('text'), async ctx => {
 
         await ctx.reply(response.content)
 
-        say.export(response.content, 'Alex', 0.8, 'hal.wav');
+        // say.export(response.content, 'Alex', 0.8, 'hal.wav');
 
-        setTimeout(async () => {
-            const audio = fs.readFileSync('hal.wav');
-            await ctx.replyWithVoice({ source: audio}); 
-            removeFile('./hal.wav')
-        } ,1000)     
+        // setTimeout(async () => {
+        //     const audio = fs.readFileSync('hal.wav');
+        //     await ctx.replyWithVoice({ source: audio}); 
+        //     removeFile('./hal.wav')
+        // } ,1000)     
         console.log(INITIAL_SESSION)                  
     }   catch (e) {
         console.log('Error while voice message', e.message)
